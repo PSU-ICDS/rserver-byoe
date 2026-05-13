@@ -1,0 +1,46 @@
+---
+title: "RStudio Server"
+cluster:
+  - 2e
+
+form:
+  - auto_accounts
+  - auto_queues
+  - environment_check
+  - auto_modules_r
+  - texlive_load
+  - custom_environment
+  - global_bc_num_hours
+  - global_cores
+  - global_memory
+  - global_advanced
+  - global_sbatch_options
+  - bc_email_on_started
+
+attributes:
+  environment_check:
+    label: Environment selection
+    widget: select
+    options:
+      - [ "Use default environment", "default", data-hide-custom-environment: true ]
+      - [ "Use custom environment", "custom", data-hide-auto-modules-r: true, data-hide-texlive-load: true ]
+  auto_modules_r:
+    label: "R version"
+  texlive_load:
+    widget: check_box
+    checked_value: 1
+    unchecked_value: 0
+    label: "Enable LaTeX (texlive) support"
+    help: |
+      - TeX/LaTeX (texlive) for using RMarkdown/Knit
+      - Alternatively, consider using [TinyTeX] R package
+        [TinyTeX]: https://yihui.org/tinytex/
+  custom_environment:
+    label: Environment setup (drag text area to enlarge)
+    widget: text_area
+    value: |
+      module load texlive
+      module load r
+    help: |
+      - Enter the commands to set up the session environment
+      - WARNING: R must be found in PATH
