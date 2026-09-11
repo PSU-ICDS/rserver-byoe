@@ -3,6 +3,13 @@ title: "RStudio Server"
 cluster:
   - 2e
 
+form_header: |
+  <div class="alert alert-info">
+    <ul>
+      <li>Quick Start: Select an R version from the dropdown menu to use a standard environment if you do not have your own R environment</li>
+    </ul>
+  </div>
+
 form:
   - auto_accounts
   - auto_queues

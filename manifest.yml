@@ -10,9 +10,3 @@ description: |
   [RStudio Server]: https://www.rstudio.com/products/rstudio-server/
   [R]: https://www.r-project.org/
   [documentation]: https://docs.icds.psu.edu/packages/anaconda/#rstudio
-
-  <div class="alert alert-info">
-    <ul>
-      <li>Quick Start: Select an R version from the dropdown menu to use a standard environment if you do not have your own R environment</li>
-    </ul>
-  </div>
